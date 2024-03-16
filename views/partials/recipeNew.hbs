@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Recipe</title>
+    
+</head>
+
+<body>
+    {{> navbar}}
+
+    <h1>New Recipe</h1>
+
+    <form action="/recipes" method="POST">
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" name="recipeName" required><br>
+
+        <label for="chef">Chef:</label>
+        <input type="text" id="chef" name="chef" required><br>
+
+        <label for="cuisine">Cuisine:</label>
+        <input type="text" id="cuisine" name="cuisine" required><br>
+
+        <label for="ingredients">Ingredients:</label>
+        <input type="text" id="ingredients" name="ingredients" required><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br>
+
+        <button type="submit">Create</button>
+    </form>
+</body>
+
+</html>

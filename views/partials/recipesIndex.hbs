@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes</title>
+</head>
+
+<body>
+    {{> navbar}}
+
+    <h1>All Recipes</h1>
+
+    {{#each recipes}}
+    <div class="recipe">
+        <h2>{{this.recipeName}}</h2>
+        <p>Chef: {{this.chef}}</p>
+        <p>Cuisine: {{this.cuisine}}</p>
+        <p>Ingredients: {{this.ingredients}}</p>
+        <p>Price: ${{this.price}}</p>
+        <p>Created At: {{this.timestamps}}</p>
+        <form action="/recipes/{{this._id}}/edit" method="GET">
+            <button type="submit">Edit</button>
+        </form>
+        <form action="/recipes/{{this._id}}/delete" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+    {{/each}}
+</body>
+
+</html>

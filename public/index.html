@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Page</title>
+  </head>
+
+  <body style="background-color: lightblue">
+    <h1 style="text-align: center">My Recipes</h1>
+    <form action="../views/partials/recipesIndex.hbs" method="post">
+      <label for="">Name:-</label>
+      <input type="text" name="name" id="name" /><br />
+
+      <label for="">Chef:-</label>
+      <input type="text" name="chef" id="chef" /><br />
+
+      <label for="">Cuisine:-</label>
+      <input type="text" name="cuisine" id="cuisine" /><br />
+
+      <label for="">Ingredients:-</label>
+      <input type="text" name="ingre" id="ingre" /><br />
+
+      <label for="">RecipeName:-</label>
+      <input type="text" name="rname" id="rname" /><br />
+
+      <label for="">Price:-</label>
+      <input type="number" name="price" id="price" /><br />
+
+      <label for="">TimeStamps:-</label>
+      <input type="time" name="timestamps" id="timestamps" /><br />
+
+      <button>submit</button>
+    </form>
+  </body>
+</html>
